@@ -1,4 +1,5 @@
 /**
+ * cd "/home/vmoskalenko/Documents/KPI/2_semester/алгоритмі/Algorithms/Lab1/" && javac Lab1.java && java Lab1
  * Lab 01
  *
  * @author Moskalenko Volodymyr
@@ -18,8 +19,15 @@ public class Lab1 {
         int num = scan.nextInt();
         scan.close();
 
-        System.out.print(num + " = ");
-        simpleDivision(num);
+        if((num <= 0) || (num > 10000))
+        {
+            System.out.println("Please enter the number in range {1-10000} ");
+        }
+        else 
+        {
+            System.out.print(num + " = ");
+            simpleDivision(num);
+        }
     }
 
     /**
@@ -51,5 +59,4 @@ public class Lab1 {
         
         System.out.println(number);
     }
-
 }
